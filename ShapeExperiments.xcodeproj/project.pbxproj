@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC00AF9427EBCD0500F784FB /* ShapeExperiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeExperiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC00AF9427EBCD0500F784FB /* Shapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC00AF9727EBCD0500F784FB /* ShapeExperimentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExperimentsApp.swift; sourceTree = "<group>"; };
 		DC00AF9927EBCD0500F784FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC00AF9B27EBCD0700F784FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		DC00AF9527EBCD0500F784FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC00AF9427EBCD0500F784FB /* ShapeExperiments.app */,
+				DC00AF9427EBCD0500F784FB /* Shapes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			);
 			name = ShapeExperiments;
 			productName = ShapeExperiments;
-			productReference = DC00AF9427EBCD0500F784FB /* ShapeExperiments.app */;
+			productReference = DC00AF9427EBCD0500F784FB /* Shapes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = is.demont.ShapeExperiments;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shapes;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,7 +314,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = is.demont.ShapeExperiments;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shapes;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

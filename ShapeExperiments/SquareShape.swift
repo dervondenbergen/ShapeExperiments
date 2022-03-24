@@ -17,6 +17,7 @@ struct SquareShape: View {
             .fill(Color.clear)
             .background(content: {
                 ForEach(info.colors, id: \.color) {circle in
+                    /// vielleicht mit Path statt SwiftUI Shapes https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes
                     Circle()
                         .fill(circle.color)
                         .frame(width: circle.radius * 2, height: circle.radius * 2, alignment: .center)

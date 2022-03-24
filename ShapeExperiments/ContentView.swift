@@ -33,7 +33,6 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ScrollView {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
                 Text("Custom")
@@ -50,13 +49,26 @@ struct ContentView: View {
             
             HStack(alignment: .top, spacing: 20) {
                 SquareShape(info: customShapeInfo, blurActive: customBlur)
-                ColorList(colors: customShapeInfo.colors)
+                ColorList(colors: customColors)
                 VStack(spacing: 0) {
-                    ForEach($customColors, id: \.description) { $customColor in
-                        ColorPicker("", selection: $customColor, supportsOpacity: false)
-                            .labelsHidden()
-                            .frame(height: 25)
-                    }
+                    ColorPicker("", selection: $customColors[0], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
+                    ColorPicker("", selection: $customColors[1], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
+                    ColorPicker("", selection: $customColors[2], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
+                    ColorPicker("", selection: $customColors[3], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
+                    ColorPicker("", selection: $customColors[4], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
+                    ColorPicker("", selection: $customColors[5], supportsOpacity: false)
+                        .labelsHidden()
+                        .frame(height: 25)
                 }
             }
             
@@ -75,12 +87,11 @@ struct ContentView: View {
             
             HStack(alignment: .top, spacing: 20) {
                 SquareShape(info: SquareShapeInfo.oe3Example, blurActive: oe3Blur)
-                ColorList(colors: SquareShapeInfo.oe3Example.colors)
+                ColorList(colors: SquareShapeInfo.oe3Example.colors.map { $0.color })
             }
             
             Spacer()
                 .frame(maxWidth: .infinity)
-        }
         }
         .padding()
         .background(Color(hex: "#ccc"))
@@ -88,18 +99,18 @@ struct ContentView: View {
 }
 
 struct ColorList: View {
-    let colors: [SquareShapeInfo.SquareShapeInfoColor]
+    let colors: [Color]
     
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(Array(colors.enumerated()), id: \.element.color) { index, color in
+            ForEach(Array(colors.enumerated()), id: \.element) { index, color in
                 HStack(spacing: 0) {
                     Text("\(index).")
                         .foregroundColor(Color.black)
                         .frame(width: 20)
                     
                     Rectangle()
-                        .fill(color.color)
+                        .fill(color)
                         .frame(maxWidth: 70, idealHeight: .infinity)
                 }
                     .frame(maxHeight: 25)
